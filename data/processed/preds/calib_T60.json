@@ -1,0 +1,78 @@
+{
+  "T_horizon": 60,
+  "window_days": 90,
+  "lambda": 0.01,
+  "kappa": 0.9000277221623287,
+  "bucket_keys": [
+    "squeeze_mid|vol_mid",
+    "squeeze_mid|vol_low",
+    "squeeze_low|vol_low",
+    "squeeze_low|vol_mid",
+    "squeeze_low|vol_high",
+    "squeeze_mid|vol_high",
+    "squeeze_high|vol_high",
+    "squeeze_high|vol_mid",
+    "squeeze_high|vol_low"
+  ],
+  "q_hat_global": 0.0,
+  "bucket_corrections": {
+    "squeeze_mid|vol_mid": {
+      "q_hat": 3.7102340789498365e-05,
+      "q_hat_raw": 3.9612081992846614e-05,
+      "n_samples": 4435.0,
+      "shrink_weight": 0.9366420274551215
+    },
+    "squeeze_mid|vol_low": {
+      "q_hat": 0.0,
+      "q_hat_raw": 0.0,
+      "n_samples": 3268.0,
+      "shrink_weight": 0.9159192825112108
+    },
+    "squeeze_low|vol_low": {
+      "q_hat": 0.0,
+      "q_hat_raw": 0.0,
+      "n_samples": 6227.0,
+      "shrink_weight": 0.9540370767580818
+    },
+    "squeeze_low|vol_mid": {
+      "q_hat": 3.984773690736508e-06,
+      "q_hat_raw": 4.334724541796506e-06,
+      "n_samples": 3416.0,
+      "shrink_weight": 0.9192680301399354
+    },
+    "squeeze_low|vol_high": {
+      "q_hat": 0.0,
+      "q_hat_raw": 0.0,
+      "n_samples": 1179.0,
+      "shrink_weight": 0.7971602434077079
+    },
+    "squeeze_mid|vol_high": {
+      "q_hat": 0.0,
+      "q_hat_raw": 0.0,
+      "n_samples": 3118.0,
+      "shrink_weight": 0.9122293739028672
+    },
+    "squeeze_high|vol_high": {
+      "q_hat": 0.0,
+      "q_hat_raw": 0.0,
+      "n_samples": 6525.0,
+      "shrink_weight": 0.9560439560439561
+    },
+    "squeeze_high|vol_mid": {
+      "q_hat": 6.249474558978864e-05,
+      "q_hat_raw": 6.880734615441376e-05,
+      "n_samples": 2970.0,
+      "shrink_weight": 0.908256880733945
+    },
+    "squeeze_high|vol_low": {
+      "q_hat": 0.00016473902412013157,
+      "q_hat_raw": 0.00020198220967856373,
+      "n_samples": 1327.0,
+      "shrink_weight": 0.8156115550092194
+    }
+  },
+  "alpha": 0.1,
+  "n_calib": 32465,
+  "low_quantile": 0.05,
+  "high_quantile": 0.95
+}

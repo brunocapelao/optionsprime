@@ -1,0 +1,78 @@
+{
+  "T_horizon": 54,
+  "window_days": 90,
+  "lambda": 0.01,
+  "kappa": 0.9000277170398201,
+  "bucket_keys": [
+    "squeeze_mid|vol_mid",
+    "squeeze_mid|vol_low",
+    "squeeze_low|vol_low",
+    "squeeze_low|vol_mid",
+    "squeeze_low|vol_high",
+    "squeeze_mid|vol_high",
+    "squeeze_high|vol_high",
+    "squeeze_high|vol_mid",
+    "squeeze_high|vol_low"
+  ],
+  "q_hat_global": 6.5122863465547e-05,
+  "bucket_corrections": {
+    "squeeze_mid|vol_mid": {
+      "q_hat": 0.00011071011595971831,
+      "q_hat_raw": 0.00011379241835959466,
+      "n_samples": 4437.0,
+      "shrink_weight": 0.9366687777074097
+    },
+    "squeeze_mid|vol_low": {
+      "q_hat": 5.47557708510765e-06,
+      "q_hat_raw": 0.0,
+      "n_samples": 3268.0,
+      "shrink_weight": 0.9159192825112108
+    },
+    "squeeze_low|vol_low": {
+      "q_hat": 9.846228095859345e-05,
+      "q_hat_raw": 0.00010006822592453981,
+      "n_samples": 6228.0,
+      "shrink_weight": 0.9540441176470589
+    },
+    "squeeze_low|vol_mid": {
+      "q_hat": 5.254668918683188e-06,
+      "q_hat_raw": 0.0,
+      "n_samples": 3418.0,
+      "shrink_weight": 0.9193114577729963
+    },
+    "squeeze_low|vol_high": {
+      "q_hat": 0.000406253233282579,
+      "q_hat_raw": 0.0004931285396875956,
+      "n_samples": 1178.0,
+      "shrink_weight": 0.79702300405954
+    },
+    "squeeze_mid|vol_high": {
+      "q_hat": 5.715874499609158e-06,
+      "q_hat_raw": 0.0,
+      "n_samples": 3118.0,
+      "shrink_weight": 0.9122293739028672
+    },
+    "squeeze_high|vol_high": {
+      "q_hat": 0.00021940767589169872,
+      "q_hat_raw": 0.00022649797058040057,
+      "n_samples": 6528.0,
+      "shrink_weight": 0.9560632688927944
+    },
+    "squeeze_high|vol_mid": {
+      "q_hat": 5.978231040288892e-06,
+      "q_hat_raw": 0.0,
+      "n_samples": 2968.0,
+      "shrink_weight": 0.9082007343941249
+    },
+    "squeeze_high|vol_low": {
+      "q_hat": 2.9766660254328715e-05,
+      "q_hat_raw": 2.177956615540892e-05,
+      "n_samples": 1328.0,
+      "shrink_weight": 0.8157248157248157
+    }
+  },
+  "alpha": 0.1,
+  "n_calib": 32471,
+  "low_quantile": 0.05,
+  "high_quantile": 0.95
+}

@@ -1,0 +1,10 @@
+check,pass,detail
+"coverage_pre[T=42] in [0.75,0.98]",True,0.891
+"coverage_pre[T=48] in [0.75,0.98]",True,0.887
+"coverage_pre[T=54] in [0.75,0.98]",True,0.884
+"coverage_pre[T=60] in [0.75,0.98]",True,0.882
+crossing_rate_pre[T=42] < 0.005,True,0.0032
+crossing_rate_pre[T=48] < 0.005,True,0.0028
+crossing_rate_pre[T=54] < 0.005,True,0.0031
+crossing_rate_pre[T=60] < 0.005,True,0.0035
+width_median non-decreasing by T,True,"{42: 0.0421, 48: 0.0445, 54: 0.0467, 60: 0.0489}"

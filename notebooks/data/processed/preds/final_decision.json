@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-10-02T14:50:46.342654",
+  "recommended_model": "CQR_LightGBM",
+  "backtest_approval_rate": 1.0,
+  "backtest_decision": "GO",
+  "training_status": "COMPLETED",
+  "final_recommendation": "\u274c NECESSITA MELHORIAS",
+  "confidence_level": "BAIXA",
+  "framework_version": "02c"
+}

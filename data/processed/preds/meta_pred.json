@@ -1,0 +1,21 @@
+{
+  "run_id": "inference_20251002_0000",
+  "ts0": "2025-10-02T00:00:00+00:00",
+  "tz": "UTC",
+  "S0": 118822.1,
+  "horizons_T": [
+    42
+  ],
+  "n_predictions": 1,
+  "environment_versions": {
+    "python": "3.13.5",
+    "numpy": "1.26.4",
+    "pandas": "2.3.0",
+    "platform": "macOS-26.0.1-arm64-arm-64bit-Mach-O",
+    "git_sha": null,
+    "timestamp": "2025-10-02T11:38:27.445215+00:00",
+    "lightgbm": "4.6.0"
+  },
+  "data_hash": "efea8355db6b0d2b79da36be801caf201731647aacfa11f6af0cf32ac4434d65",
+  "timestamp": "2025-10-02T08:38:27.445330"
+}

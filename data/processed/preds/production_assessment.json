@@ -1,0 +1,20 @@
+{
+  "timestamp": "2025-10-02T15:27:48.196984",
+  "criteria": {
+    "cv_quality": false,
+    "backtest_approval": true,
+    "performance_improvement": true,
+    "technical_validation": false
+  },
+  "approved_criteria": 2,
+  "total_criteria": 4,
+  "final_decision": "\ud83d\udfe1 APROVA\u00c7\u00c3O CONDICIONAL",
+  "recommendation": "\u26a0\ufe0f Modelo pode ir para produ\u00e7\u00e3o com monitoramento refor\u00e7ado",
+  "confidence": "M\u00e9dia",
+  "reasons": [
+    "\u26a0\ufe0f Cross-validation: Dados n\u00e3o dispon\u00edveis",
+    "\u2705 Backtest hist\u00f3rico: Aprovado (taxa: 100.0%)",
+    "\u2705 Performance: Melhoria de 34.7% no MAE",
+    "\u26a0\ufe0f Valida\u00e7\u00e3o t\u00e9cnica: Execute o notebook de qualidade primeiro"
+  ]
+}

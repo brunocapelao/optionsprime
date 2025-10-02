@@ -1,0 +1,78 @@
+{
+  "T_horizon": 42,
+  "window_days": 90,
+  "lambda": 0.01,
+  "kappa": 0.9000277068004803,
+  "bucket_keys": [
+    "squeeze_mid|vol_mid",
+    "squeeze_mid|vol_low",
+    "squeeze_low|vol_low",
+    "squeeze_low|vol_mid",
+    "squeeze_low|vol_high",
+    "squeeze_mid|vol_high",
+    "squeeze_high|vol_high",
+    "squeeze_high|vol_mid",
+    "squeeze_high|vol_low"
+  ],
+  "q_hat_global": 0.0,
+  "bucket_corrections": {
+    "squeeze_mid|vol_mid": {
+      "q_hat": 2.0066293521455484e-05,
+      "q_hat_raw": 2.1421513705254818e-05,
+      "n_samples": 4442.0,
+      "shrink_weight": 0.9367355546183045
+    },
+    "squeeze_mid|vol_low": {
+      "q_hat": 0.000119230609823232,
+      "q_hat_raw": 0.00013018259480393303,
+      "n_samples": 3266.0,
+      "shrink_weight": 0.9158721256309591
+    },
+    "squeeze_low|vol_low": {
+      "q_hat": 0.0,
+      "q_hat_raw": 0.0,
+      "n_samples": 6233.0,
+      "shrink_weight": 0.9540792897596816
+    },
+    "squeeze_low|vol_mid": {
+      "q_hat": 0.0,
+      "q_hat_raw": 0.0,
+      "n_samples": 3417.0,
+      "shrink_weight": 0.9192897497982244
+    },
+    "squeeze_low|vol_high": {
+      "q_hat": 0.00018637798795442695,
+      "q_hat_raw": 0.0002338426707951129,
+      "n_samples": 1178.0,
+      "shrink_weight": 0.79702300405954
+    },
+    "squeeze_mid|vol_high": {
+      "q_hat": 0.0,
+      "q_hat_raw": 0.0,
+      "n_samples": 3119.0,
+      "shrink_weight": 0.9122550453348932
+    },
+    "squeeze_high|vol_high": {
+      "q_hat": 0.0023379144881397872,
+      "q_hat_raw": 0.0024453060585642146,
+      "n_samples": 6531.0,
+      "shrink_weight": 0.956082564778217
+    },
+    "squeeze_high|vol_mid": {
+      "q_hat": 0.0,
+      "q_hat_raw": 0.0,
+      "n_samples": 2968.0,
+      "shrink_weight": 0.9082007343941249
+    },
+    "squeeze_high|vol_low": {
+      "q_hat": 1.686249537634377e-05,
+      "q_hat_raw": 2.066892774120692e-05,
+      "n_samples": 1329.0,
+      "shrink_weight": 0.8158379373848987
+    }
+  },
+  "alpha": 0.1,
+  "n_calib": 32483,
+  "low_quantile": 0.05,
+  "high_quantile": 0.95
+}

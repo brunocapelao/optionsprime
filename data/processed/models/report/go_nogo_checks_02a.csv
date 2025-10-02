@@ -1,0 +1,13 @@
+check,pass,detail,target
+"coverage[T=42] ∈ [87%,93%] (02a spec)",True,0.891,90% ± 3%
+"coverage[T=48] ∈ [87%,93%] (02a spec)",True,0.887,90% ± 3%
+"coverage[T=54] ∈ [87%,93%] (02a spec)",True,0.884,90% ± 3%
+"coverage[T=60] ∈ [87%,93%] (02a spec)",True,0.882,90% ± 3%
+crossing_rate[T=42] < 0.5% (02a spec),True,0.0032,< 0.005
+crossing_rate[T=48] < 0.5% (02a spec),True,0.0028,< 0.005
+crossing_rate[T=54] < 0.5% (02a spec),True,0.0031,< 0.005
+crossing_rate[T=60] < 0.5% (02a spec),True,0.0035,< 0.005
+width_median non-decreasing by T (02a spec),True,"{42: 0.0421, 48: 0.0445, 54: 0.0467, 60: 0.0489}",monotonic increase
+"embargo = 42 bars (7 days, 02a spec)",True,42 bars,42 bars (7 days)
+CV method = CPCV purged (02a spec),True,CPCV,CPCV with purging
+"horizons T ∈ {42,48,54,60} bars (02a spec)",True,"[42, 48, 54, 60]","[42, 48, 54, 60] bars (≈7-10 days)"

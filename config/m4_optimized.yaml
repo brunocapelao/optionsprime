@@ -1,0 +1,103 @@
+# CONFIGURAÇÃO OTIMIZADA PARA MACBOOK PRO M4
+# ===========================================
+# Versão de produção otimizada para Apple Silicon
+# Mantém qualidade 02a com máxima performance
+
+# Target horizons (4H bars = 7-10 days)
+targets_T: [42, 48, 54, 60]  # 42/48/54/60 bars (≈7-10 days)
+
+# Quantile levels
+taus: [0.05, 0.25, 0.50, 0.75, 0.95]
+
+# Data paths
+data:
+  features_path: "data/processed/features/features_4H.parquet"
+  cv_splits_path: "data/processed/features/cv_splits.json"
+  max_nan_ratio: 0.5
+  collinearity_threshold: 0.95
+
+# Cross-validation parameters
+cpcv:
+  embargo_bars_4h: 42  # 42 bars embargo (7 days) for CPCV as per 02a spec
+
+# Parâmetros LightGBM otimizados para M4
+lgb_base_params:
+  # Threading otimizado para Apple Silicon M4
+  num_threads: 12              # Usar quase todos os cores (P+E cores)
+  force_row_wise: true         # Melhor para datasets com muitas features
+  max_bin: 255                 # Máximo para melhor precisão
+  boost_from_average: true     # Inicialização mais rápida
+  
+  # Configurações para Unified Memory do M4
+  max_depth: 8                 # Balanceado para evitar overfitting
+  min_data_in_leaf: 20         # Otimizado para SSD rápido
+  
+  # Regularização leve para velocidade
+  lambda_l1: 0.01
+  lambda_l2: 0.01
+  
+  # Outras otimizações
+  verbosity: 1
+  objective: "quantile"
+  metric: "quantile"
+
+# Grid search otimizado (reduz de ~3^7=2187 para ~2^6=64 combinações)
+model:
+  param_grid:
+    learning_rate: [0.05, 0.1, 0.2]      # 3 valores (original)
+    num_leaves: [63, 127]                # 2 valores (vs 3 original)
+    max_depth: [6, 8]                    # 2 valores (vs 3 original) 
+    min_data_in_leaf: [20, 50]           # 2 valores (vs 3 original)
+    feature_fraction: [0.8, 0.9]         # 2 valores (vs 3 original)
+    bagging_fraction: [0.8, 0.9]         # 2 valores (vs 3 original)
+    lambda_l1: [0.0, 0.1]                # 2 valores (vs 3 original)
+    # Total: 3×2×2×2×2×2×2 = 192 combinações (vs 2187 original)
+
+# CV otimizado para M4
+cv:
+  n_splits: 4           # 4 splits (vs 5 original) = 20% mais rápido
+  test_size: 0.2
+  random_state: 42
+
+# Conformal otimizado
+conformal:
+  alpha: 0.1  # 90% prediction intervals
+  window_days: 90  # Calibration window (60-120 days)
+  # Manter todas as configurações 02a para qualidade
+  coverage_targets: [0.87, 0.90, 0.93]  # Spec 02a completa
+  mondrian:
+    regime_buckets: ["high_vol", "normal", "low_vol"]  # Volatility regimes
+    vol_buckets: 3  # Number of volatility buckets
+    use_mondrian: true                   # Manter para qualidade
+    volatility_window: 168
+    n_buckets: [3, 5]                    # Manter original
+  shrinkage:
+    min_bucket_size: 300  # Minimum samples for bucket-specific calibration
+    global_weight: 0.5  # Weight for global vs bucket-specific quantile
+  lambda: 0.01  # Time decay for weighted quantiles
+  calibration_window: 7000               # Reduzido de 10000 para velocidade
+  
+# Quality control
+qc:
+  min_coverage: 0.87  # 90% ±3% as per 02a spec
+  max_coverage: 0.93
+  max_crossing_rate: 0.005  # 0.5% threshold
+  interval_score_threshold: 2.0
+
+# Output
+output:
+  dir: "data/processed/preds"
+
+# Checkpoint configuration (resume interrupted training)
+checkpoint:
+  enabled: true              # Enable checkpoint system
+  save_frequency: 1          # Save checkpoint after every N horizons
+  auto_resume: true          # Automatically resume from checkpoint if found
+
+# Salvar apenas o essencial para produção
+save_outputs:
+  models: true
+  predictions: true
+  feature_importance: true
+  cv_results: true
+  qc_report: true

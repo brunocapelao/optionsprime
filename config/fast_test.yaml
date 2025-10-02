@@ -1,0 +1,90 @@
+# TESTE SUPER RÁPIDO - Pipeline Completo em ~15 minutos
+# ====================================================
+# Configuração para validar rapidamente todo o pipeline 02a
+# Otimizada para MacBook Pro M4 (Apple Silicon)
+
+# Target horizons mínimos para teste rápido
+targets_T: [42]  # Apenas 1 horizonte para máxima velocidade
+taus: [0.25, 0.5, 0.75]  # 3 quantis principais
+
+# Data paths (mesmo do base)
+data:
+  features_path: "data/processed/features/features_4H.parquet"
+  cv_splits_path: "data/processed/features/cv_splits.json"
+  max_nan_ratio: 0.5
+  collinearity_threshold: 0.95
+
+# Cross-validation otimizado para velocidade
+cpcv:
+  embargo_bars_4h: 42  # Mantém spec 02a
+
+# Model hyperparameters super reduzidos para teste ultra-rápido
+model:
+  param_grid:
+    # Grid mínimo - apenas as melhores configurações
+    learning_rate: [0.1]       # Apenas 1 valor
+    num_leaves: [63]           # Apenas 1 valor  
+    max_depth: [6]             # Apenas 1 valor
+    min_data_in_leaf: [20]     # Apenas 1 valor
+    feature_fraction: [0.8]    # Apenas 1 valor
+    bagging_fraction: [0.8]    # Apenas 1 valor
+    lambda_l1: [0.0]           # Apenas 1 valor
+    # Total: 1 combinação apenas!
+
+# LightGBM otimizado para Apple Silicon M4
+lgb_base_params:
+  objective: "quantile"
+  metric: "quantile"
+  verbosity: 1
+  # Threading otimizado para M4 (10-14 cores)
+  num_threads: 12        # Usar a maioria dos cores
+  force_row_wise: true   # Melhor para muitas features
+  max_bin: 255          # Máximo para precisão
+  boost_from_average: true  # Inicialização mais rápida
+  # Sem GPU pois LightGBM não suporta Metal
+
+# Cross-validation super rápido
+cv:
+  n_splits: 2           # Apenas 2 splits para teste
+  test_size: 0.2        # Mantém tamanho teste
+  random_state: 42
+
+# Checkpoint configuration (disable for fast tests)
+checkpoint:
+  enabled: false         # Disable for quick tests
+  save_frequency: 1
+  auto_resume: false
+
+# Conformal prediction ultra-rápido
+conformal:
+  alpha: 0.1                             # 90% coverage (1-alpha)
+  coverage_targets: [0.90]               # Apenas 1 target para teste
+  mondrian:
+    use_mondrian: false                  # Desabilitado para velocidade
+    volatility_window: 168  
+    n_buckets: [3]                       # Apenas 1 configuração
+  time_decay:
+    lambda_decay: 0.01
+    min_weight: 0.001
+  calibration_window: 1000               # Muito reduzido
+  shrinkage_factor: 0.1
+
+# Quality control (mesmo spec 02a)
+qc:
+  min_coverage: 0.87
+  max_coverage: 0.93
+  max_crossing_rate: 0.005
+  min_samples: 1000
+
+# Output configuration
+output:
+  dir: "data/processed/preds"
+  prefix: "m4_fast"
+  
+# Outputs otimizados para velocidade
+save_outputs:
+  models: true           # Salvar apenas se necessário
+  predictions: true      # Manter para análise
+  feature_importance: true
+  cv_results: true
+  qc_report: true

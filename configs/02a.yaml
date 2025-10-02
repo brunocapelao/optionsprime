@@ -1,0 +1,75 @@
+# 02a Quantile Bands Training Configuration
+# ========================================
+
+# Prediction targets
+targets_T: [42, 48, 54, 60]  # 4H bars -> 7-10 days
+taus: [0.05, 0.25, 0.5, 0.75, 0.95]
+
+# Cross-validation configuration
+cpcv:
+  n_folds: 5
+  embargo_bars_4h: 42
+  selection_metric: "interval_score"
+
+# Data configuration
+data:
+  features_path: "data/processed/features/features_4H.parquet"
+  cv_splits_path: "data/processed/features/cv_splits.json"
+  nan_threshold: 0.3
+  collinearity_threshold: 0.95
+
+# Model configuration
+model:
+  kind: "lightgbm_quantile"
+  
+  # Hyperparameter grid search
+  param_grid:
+    num_leaves: [31, 63, 127]
+    min_data_in_leaf: [100, 200, 400]
+    feature_fraction: [0.6, 0.7, 0.8]
+    learning_rate: [0.02, 0.03, 0.05]
+  
+  # Fixed parameters
+  early_stopping_rounds: 200
+  n_estimators: 2000
+  
+  # Model type alternatives
+  # kind: "enbpi"  # Ensemble Batch Prediction Intervals
+
+# Sample weights (optional)
+weights:
+  time_decay_lambda: 0.01  # Exponential decay: w_t = exp(-λ * Δt)
+
+# Conformal prediction configuration
+conformal:
+  method: "cqr"  # Conformal Quantile Regression
+  alpha: 0.10    # Miscoverage level (target coverage = 90%)
+  window_days: 90  # Calibration window in days
+  
+  # Mondrian conditioning (stratified conformal)
+  mondrian:
+    use_regime: true  # Use regime_label if available
+    vol_bucket_from: "rv_cc_1d_rank_l1"      # Volatility terciles
+    squeeze_bucket_from: "bb_bw_1m_rank_l1"  # Squeeze terciles (regime proxy)
+  
+  # Weighted conformal (optional)
+  weighted:
+    time_decay_lambda: 0.01  # Same as model weights
+
+# Output configuration
+output:
+  dir: "data/processed/02a_train"
+  atomic_writes: true  # Ensure atomic file writes
+
+# Service Level Objectives (SLOs)
+slo:
+  coverage_target: [0.87, 0.93]  # 90% ± 3%
+  crossing_max_pct: 0.5          # Max quantile crossing rate
+  max_execution_minutes: 30      # Pipeline timeout
+
+# Quality control thresholds
+qc:
+  min_coverage_preconformal: 0.75
+  max_coverage_preconformal: 0.98
+  max_crossing_rate: 0.005  # 0.5%
+  min_bucket_size: 50       # Conformal calibration buckets

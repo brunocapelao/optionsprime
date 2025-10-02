@@ -1,0 +1,14 @@
+{
+  "run_id": "20251002_151643_1h",
+  "fsym": "BTC",
+  "tsym": "USD",
+  "tf": "1h",
+  "exchange": "CCCAGG",
+  "rows_final": 132107,
+  "rows_added_this_run": 15,
+  "start_utc": "2010-09-07T05:00:00+00:00",
+  "end_utc": "2025-10-02T15:00:00+00:00",
+  "pages": 1,
+  "checkpointed_rows": 15,
+  "batch": 2000
+}

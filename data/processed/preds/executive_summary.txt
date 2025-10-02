@@ -1,0 +1,16 @@
+RESUMO EXECUTIVO - BACKTEST HISTÓRICO
+==================================================
+Data: 2025-10-02 14:33:47
+Framework: 02c
+
+MODELO RECOMENDADO:
+• Nome: CQR_LightGBM
+• Taxa de aprovação: 100.0%
+• Decisão: GO
+
+MÉTRICAS PRINCIPAIS:
+• CQR_LightGBM: MAE=0.0206, Coverage=0.906
+• HAR-RV_Baseline: MAE=0.0394, Coverage=0.854
+
+STATUS PARA PRODUÇÃO:
+✅ APROVADO - Pronto para deploy

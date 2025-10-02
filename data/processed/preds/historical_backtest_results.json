@@ -1,0 +1,199 @@
+{
+  "config": {
+    "horizons_T": [
+      42,
+      48,
+      54,
+      60
+    ],
+    "quantiles": [
+      0.05,
+      0.25,
+      0.5,
+      0.75,
+      0.95
+    ],
+    "alpha": 0.1,
+    "min_train_samples": 2000,
+    "max_lookback_days": 730,
+    "step_size_hours": 24,
+    "warmup_periods": 10,
+    "gates": {
+      "coverage_min": 0.87,
+      "coverage_max": 0.93,
+      "crossing_rate_max": 0.005,
+      "psi_max": 0.2,
+      "ks_pvalue_min": 0.05
+    }
+  },
+  "fold_results": [
+    {
+      "fold_id": 1,
+      "models": {
+        "CQR_LightGBM": {
+          "metrics": {
+            "42": {
+              "MAE": 0.017996978313800045,
+              "RMSE": 0.02666362724311722,
+              "Coverage_90": 0.8859089411358853,
+              "n_predictions": 158
+            },
+            "48": {
+              "MAE": 0.018149095475267163,
+              "RMSE": 0.030926780659137457,
+              "Coverage_90": 0.8943360895477527,
+              "n_predictions": 152
+            },
+            "54": {
+              "MAE": 0.015206618515934316,
+              "RMSE": 0.025969084346778113,
+              "Coverage_90": 0.8916201298879448,
+              "n_predictions": 146
+            },
+            "60": {
+              "MAE": 0.02159704482147092,
+              "RMSE": 0.02598515073468534,
+              "Coverage_90": 0.9024262741400273,
+              "n_predictions": 140
+            }
+          }
+        },
+        "HAR-RV_Baseline": {
+          "metrics": {
+            "42": {
+              "MAE": 0.026798288062360065,
+              "RMSE": 0.03817422991024073,
+              "Coverage_90": 0.8303313116533457,
+              "n_predictions": 158
+            },
+            "48": {
+              "MAE": 0.02600842953356216,
+              "RMSE": 0.045069947260798854,
+              "Coverage_90": 0.8478042128431621,
+              "n_predictions": 152
+            },
+            "54": {
+              "MAE": 0.037465801613460074,
+              "RMSE": 0.03648336259973476,
+              "Coverage_90": 0.8286839760002843,
+              "n_predictions": 146
+            },
+            "60": {
+              "MAE": 0.02959686597025676,
+              "RMSE": 0.04648798980408213,
+              "Coverage_90": 0.8383455293893419,
+              "n_predictions": 140
+            }
+          }
+        }
+      },
+      "gates": {
+        "CQR_LightGBM": {
+          "gates_passed": 12,
+          "gates_total": 12,
+          "approval_rate": 1.0,
+          "decision": "GO"
+        },
+        "HAR-RV_Baseline": {
+          "gates_passed": 5,
+          "gates_total": 12,
+          "approval_rate": 0.4166666666666667,
+          "decision": "NO_GO"
+        }
+      }
+    },
+    {
+      "fold_id": 2,
+      "models": {
+        "CQR_LightGBM": {
+          "metrics": {
+            "42": {
+              "MAE": 0.019084187074986925,
+              "RMSE": 0.028016035662971648,
+              "Coverage_90": 0.8832089716720412,
+              "n_predictions": 158
+            },
+            "48": {
+              "MAE": 0.024394336228961876,
+              "RMSE": 0.03048538992071189,
+              "Coverage_90": 0.9115133275274199,
+              "n_predictions": 152
+            },
+            "54": {
+              "MAE": 0.021583570921852962,
+              "RMSE": 0.03014254279061975,
+              "Coverage_90": 0.8835871302663753,
+              "n_predictions": 146
+            },
+            "60": {
+              "MAE": 0.021427335452703044,
+              "RMSE": 0.026553703559368324,
+              "Coverage_90": 0.8965753267742511,
+              "n_predictions": 140
+            }
+          }
+        },
+        "HAR-RV_Baseline": {
+          "metrics": {
+            "42": {
+              "MAE": 0.03443669715220646,
+              "RMSE": 0.04673343500708185,
+              "Coverage_90": 0.8611027105425172,
+              "n_predictions": 158
+            },
+            "48": {
+              "MAE": 0.035073002935819435,
+              "RMSE": 0.037235633137628114,
+              "Coverage_90": 0.8407677124042953,
+              "n_predictions": 152
+            },
+            "54": {
+              "MAE": 0.025643684089902915,
+              "RMSE": 0.04579215339764697,
+              "Coverage_90": 0.8771551588790452,
+              "n_predictions": 146
+            },
+            "60": {
+              "MAE": 0.028961655852686136,
+              "RMSE": 0.036315450637434646,
+              "Coverage_90": 0.8485342046052192,
+              "n_predictions": 140
+            }
+          }
+        }
+      },
+      "gates": {
+        "CQR_LightGBM": {
+          "gates_passed": 12,
+          "gates_total": 12,
+          "approval_rate": 1.0,
+          "decision": "GO"
+        },
+        "HAR-RV_Baseline": {
+          "gates_passed": 7,
+          "gates_total": 12,
+          "approval_rate": 0.5833333333333334,
+          "decision": "NO_GO"
+        }
+      }
+    }
+  ],
+  "gates_summary": {
+    "CQR_LightGBM": {
+      "total_passed": 24,
+      "total_gates": 24,
+      "approval_rate": 1.0,
+      "final_decision": "GO"
+    },
+    "HAR-RV_Baseline": {
+      "total_passed": 12,
+      "total_gates": 24,
+      "approval_rate": 0.5,
+      "final_decision": "NO_GO"
+    }
+  },
+  "timestamp": "2025-10-02T14:38:52.949956",
+  "execution_time": 0.0004680156707763672,
+  "framework_version": "02c",
+  "validation_status": "COMPLETED"
+}

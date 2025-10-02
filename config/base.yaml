@@ -1,0 +1,64 @@
+# Base Configuration for 02a Training Pipeline
+# ==========================================
+
+# Target horizons (4H bars = 7-10 days)
+targets_T: [42, 48, 54, 60]  # 42/48/54/60 bars (≈7-10 days)
+
+# Quantile levels
+taus: [0.05, 0.25, 0.50, 0.75, 0.95]
+
+# Data paths
+data:
+  features_path: "data/processed/features/features_4H.parquet"
+  cv_splits_path: "data/processed/features/cv_splits.json"
+  max_nan_ratio: 0.5
+  collinearity_threshold: 0.95
+
+# Cross-validation parameters
+cpcv:
+  embargo_bars_4h: 42  # 42 bars embargo (7 days) for CPCV as per 02a spec
+
+# Model hyperparameters
+model:
+  param_grid:
+    learning_rate: [0.05, 0.1, 0.2]
+    num_leaves: [31, 63, 127]
+    max_depth: [5, 7, 10]
+    min_data_in_leaf: [20, 50, 100]
+    feature_fraction: [0.8, 0.9, 1.0]
+    bagging_fraction: [0.8, 0.9, 1.0]
+    lambda_l1: [0.0, 0.1, 1.0]
+    lambda_l2: [0.0, 0.1, 1.0]
+
+# Time-decay weighting (optional)
+weights:
+  time_decay_lambda: 0.001  # Exponential decay parameter
+
+# Conformal prediction
+conformal:
+  alpha: 0.1  # 90% prediction intervals
+  window_days: 90  # Calibration window (60-120 days)
+  mondrian:
+    regime_buckets: ["high_vol", "normal", "low_vol"]  # Volatility regimes
+    vol_buckets: 3  # Number of volatility buckets
+  shrinkage:
+    min_bucket_size: 300  # Minimum samples for bucket-specific calibration
+    global_weight: 0.5  # Weight for global vs bucket-specific quantile
+  lambda: 0.01  # Time decay for weighted quantiles
+
+# Quality control
+qc:
+  min_coverage: 0.87  # 90% ±3% as per 02a spec
+  max_coverage: 0.93
+  max_crossing_rate: 0.005  # 0.5% threshold
+  interval_score_threshold: 2.0
+
+# Output
+output:
+  dir: "data/processed/models"
+
+# Checkpoint configuration (resume interrupted training)
+checkpoint:
+  enabled: true              # Enable checkpoint system
+  save_frequency: 1          # Save checkpoint after every N horizons
+  auto_resume: true          # Automatically resume from checkpoint if found

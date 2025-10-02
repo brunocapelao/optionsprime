@@ -1,0 +1,3841 @@
+{
+  "T_horizon": 48,
+  "n_folds": 5,
+  "fold_details": [
+    {
+      "fold_id": 0,
+      "n_val": 6505,
+      "T_horizon": 48,
+      "crossing_rate_raw": 0.00030745580322828596,
+      "pinball_0.05": 0.0054900043892024296,
+      "pinball_0.25": 0.008714713551888423,
+      "pinball_0.5": 0.008903250035428276,
+      "pinball_0.75": 0.008395858128014074,
+      "pinball_0.95": 0.004407655047633567,
+      "interval_score": 0.19795318873671983,
+      "coverage_90": 0.9469638739431206,
+      "width_median": 0.14661457689549195,
+      "width_iqr": 0.1479649732345502
+    },
+    {
+      "fold_id": 1,
+      "n_val": 6505,
+      "T_horizon": 48,
+      "crossing_rate_raw": 0.0004611837048424289,
+      "pinball_0.05": 0.0038343811849724315,
+      "pinball_0.25": 0.007691494187361864,
+      "pinball_0.5": 0.008359477819346343,
+      "pinball_0.75": 0.007757899224172731,
+      "pinball_0.95": 0.004024364083947127,
+      "interval_score": 0.1571749053783911,
+      "coverage_90": 0.9434281322059954,
+      "width_median": 0.11789241291885363,
+      "width_iqr": 0.1184832578306623
+    },
+    {
+      "fold_id": 2,
+      "n_val": 6505,
+      "T_horizon": 48,
+      "crossing_rate_raw": 0.0,
+      "pinball_0.05": 0.004445739698187564,
+      "pinball_0.25": 0.007075147312257787,
+      "pinball_0.5": 0.006916463671463915,
+      "pinball_0.75": 0.007389412815380594,
+      "pinball_0.95": 0.004768829457842965,
+      "interval_score": 0.1842913831206105,
+      "coverage_90": 0.9409684857801691,
+      "width_median": 0.16717995424351212,
+      "width_iqr": 0.11063398948951875
+    },
+    {
+      "fold_id": 3,
+      "n_val": 6505,
+      "T_horizon": 48,
+      "crossing_rate_raw": 0.0,
+      "pinball_0.05": 0.00377111186621547,
+      "pinball_0.25": 0.00568050009983746,
+      "pinball_0.5": 0.006049889836861181,
+      "pinball_0.75": 0.006252274318507672,
+      "pinball_0.95": 0.0036834063958995703,
+      "interval_score": 0.1490903652423007,
+      "coverage_90": 0.941890853189854,
+      "width_median": 0.13509950391583622,
+      "width_iqr": 0.07366355838873839
+    },
+    {
+      "fold_id": 4,
+      "n_val": 6457,
+      "T_horizon": 48,
+      "crossing_rate_raw": 0.00015487068297971194,
+      "pinball_0.05": 0.00245848458897647,
+      "pinball_0.25": 0.003458372246659049,
+      "pinball_0.5": 0.003191324943408191,
+      "pinball_0.75": 0.0029833433735136222,
+      "pinball_0.95": 0.002057210661795841,
+      "interval_score": 0.09031390501544619,
+      "coverage_90": 0.9535387951060864,
+      "width_median": 0.07861302477312057,
+      "width_iqr": 0.0658814833382045
+    }
+  ],
+  "crossing_rate_raw_mean": 0.00018470203821008535,
+  "crossing_rate_raw_std": 0.0001792373813704844,
+  "interval_score_mean": 0.15576474949869368,
+  "interval_score_std": 0.03721285320831226,
+  "coverage_90_mean": 0.9453580280450453,
+  "coverage_90_std": 0.004572036121392041,
+  "width_median_mean": 0.12907989454936292,
+  "width_median_std": 0.0298910689700034,
+  "width_iqr_mean": 0.10332545245633484,
+  "width_iqr_std": 0.030191851137805197,
+  "pinball_0.05_mean": 0.0039999443455108735,
+  "pinball_0.05_std": 0.0009874093452056528,
+  "pinball_0.25_mean": 0.006524045479600916,
+  "pinball_0.25_std": 0.0018207469619387997,
+  "pinball_0.5_mean": 0.006684081261301582,
+  "pinball_0.5_std": 0.0020192677246139504,
+  "pinball_0.75_mean": 0.0065557575719177395,
+  "pinball_0.75_std": 0.00191730753733694,
+  "pinball_0.95_mean": 0.0037882931294238135,
+  "pinball_0.95_std": 0.0009389822052889033,
+  "hyperparameter_search": {
+    "best_params": {
+      "bagging_fraction": 0.8,
+      "feature_fraction": 0.9,
+      "lambda_l1": 0.1,
+      "learning_rate": 0.2,
+      "max_depth": 8,
+      "min_data_in_leaf": 20,
+      "num_leaves": 127
+    },
+    "best_score": 0.09109635353362858,
+    "search_results": [
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09159810739758895,
+        "fold_scores": [
+          0.14469341366325922,
+          0.088268415696667,
+          0.09528880918949365,
+          0.07892621269539447,
+          0.05081368574313045
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09159810739758895,
+        "fold_scores": [
+          0.14469341366325922,
+          0.088268415696667,
+          0.09528880918949365,
+          0.07892621269539447,
+          0.05081368574313045
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09139440785682763,
+        "fold_scores": [
+          0.1433601429076911,
+          0.08847942377114243,
+          0.09526632606222078,
+          0.07902570198176125,
+          0.05084044456132256
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09139440785682763,
+        "fold_scores": [
+          0.1433601429076911,
+          0.08847942377114243,
+          0.09526632606222078,
+          0.07902570198176125,
+          0.05084044456132256
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09151017618622008,
+        "fold_scores": [
+          0.1442700279271024,
+          0.08873136937420673,
+          0.09513650312541139,
+          0.07867469153331742,
+          0.05073828897106248
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.0915342995917972,
+        "fold_scores": [
+          0.14483188381104622,
+          0.0881742366707386,
+          0.09526820074705092,
+          0.07866556422615446,
+          0.05073161250399583
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09147430300088896,
+        "fold_scores": [
+          0.144058883644631,
+          0.08870926191863292,
+          0.09503169335156977,
+          0.07886368361250937,
+          0.050707992477101775
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09166110736373459,
+        "fold_scores": [
+          0.14514528491295728,
+          0.0883517746407567,
+          0.0952558322652756,
+          0.07878829396072355,
+          0.05076435103895974
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09185019169586427,
+        "fold_scores": [
+          0.14547185989400385,
+          0.08882456615105846,
+          0.09531670830178468,
+          0.07885606747006933,
+          0.05078175666240496
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09185019169586427,
+        "fold_scores": [
+          0.14547185989400385,
+          0.08882456615105846,
+          0.09531670830178468,
+          0.07885606747006933,
+          0.05078175666240496
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09198411384563579,
+        "fold_scores": [
+          0.14622622599122573,
+          0.08858650592285786,
+          0.095449131082388,
+          0.07887432157983433,
+          0.05078438465187303
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09198411384563579,
+        "fold_scores": [
+          0.14622622599122573,
+          0.08858650592285786,
+          0.095449131082388,
+          0.07887432157983433,
+          0.05078438465187303
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09121989880316198,
+        "fold_scores": [
+          0.14239051392845878,
+          0.08881663711994564,
+          0.0952204701939352,
+          0.0789218260946969,
+          0.05075004667877335
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09207726876068592,
+        "fold_scores": [
+          0.1466008375137961,
+          0.0886382078914186,
+          0.09527423809378392,
+          0.07914168408345217,
+          0.05073137622097886
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09122786269278622,
+        "fold_scores": [
+          0.14234869301681985,
+          0.08886810489755798,
+          0.09521591415021155,
+          0.07895668423586762,
+          0.050749917163474136
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09181022759683344,
+        "fold_scores": [
+          0.14568419348574566,
+          0.08853297731870279,
+          0.0949523911187855,
+          0.07911220171302999,
+          0.05076937434790332
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09222378955821167,
+        "fold_scores": [
+          0.1458964157003582,
+          0.08975573546646283,
+          0.0956611341868281,
+          0.07881267302266198,
+          0.050992989414747295
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09222378955821167,
+        "fold_scores": [
+          0.1458964157003582,
+          0.08975573546646283,
+          0.0956611341868281,
+          0.07881267302266198,
+          0.050992989414747295
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09221974183432657,
+        "fold_scores": [
+          0.14546711719480174,
+          0.08942099156434682,
+          0.09637918905445407,
+          0.07884231075876569,
+          0.05098910059926453
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09221974183432657,
+        "fold_scores": [
+          0.14546711719480174,
+          0.08942099156434682,
+          0.09637918905445407,
+          0.07884231075876569,
+          0.05098910059926453
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09217675853629971,
+        "fold_scores": [
+          0.14436487462753578,
+          0.09063154638913341,
+          0.0958537237841978,
+          0.07905425076292696,
+          0.05097939711770453
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09149226404100287,
+        "fold_scores": [
+          0.14320589330776431,
+          0.088656680888946,
+          0.09571616137516221,
+          0.07891412175097581,
+          0.050968462882166006
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09223014426739619,
+        "fold_scores": [
+          0.14579335015090836,
+          0.08958012591136616,
+          0.09584018264543931,
+          0.07895401066521722,
+          0.0509830519640499
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09209084564232342,
+        "fold_scores": [
+          0.1446185072832362,
+          0.08947089449269002,
+          0.09624698082252499,
+          0.0790664121970939,
+          0.05105143341607201
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09183144509245374,
+        "fold_scores": [
+          0.14590435507061245,
+          0.08825455793440945,
+          0.09531466098166055,
+          0.07887497744248119,
+          0.050808674033105045
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09183144509245374,
+        "fold_scores": [
+          0.14590435507061245,
+          0.08825455793440945,
+          0.09531466098166055,
+          0.07887497744248119,
+          0.050808674033105045
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.0915567402308455,
+        "fold_scores": [
+          0.14412651978245677,
+          0.08842865167946909,
+          0.09537357982218729,
+          0.07901571210434351,
+          0.050839237765770796
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.0915567402308455,
+        "fold_scores": [
+          0.14412651978245677,
+          0.08842865167946909,
+          0.09537357982218729,
+          0.07901571210434351,
+          0.050839237765770796
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09166347484744794,
+        "fold_scores": [
+          0.14502897353259808,
+          0.08873136937420673,
+          0.09514614063304894,
+          0.07867260172632351,
+          0.05073828897106248
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09136867685197161,
+        "fold_scores": [
+          0.1439186312623439,
+          0.08828223203641847,
+          0.09529032514500906,
+          0.07862058331209082,
+          0.05073161250399583
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09128099456767144,
+        "fold_scores": [
+          0.14310293964050969,
+          0.08870926191863292,
+          0.09501932097392832,
+          0.0788649017735969,
+          0.05070854853168943
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09162403252675717,
+        "fold_scores": [
+          0.1447874050671193,
+          0.08854241153272216,
+          0.09524945270607561,
+          0.07878188908615784,
+          0.050759004241710905
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09186459892963855,
+        "fold_scores": [
+          0.145508978310629,
+          0.08892860280906752,
+          0.0953388219129866,
+          0.07876483495310468,
+          0.05078175666240496
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09186459892963855,
+        "fold_scores": [
+          0.145508978310629,
+          0.08892860280906752,
+          0.0953388219129866,
+          0.07876483495310468,
+          0.05078175666240496
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09206704445925837,
+        "fold_scores": [
+          0.1466878828010259,
+          0.08858928988594637,
+          0.09539936831272278,
+          0.07887687968088143,
+          0.0507818016157154
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09206704445925837,
+        "fold_scores": [
+          0.1466878828010259,
+          0.08858928988594637,
+          0.09539936831272278,
+          0.07887687968088143,
+          0.0507818016157154
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09154487700955462,
+        "fold_scores": [
+          0.14386990318527557,
+          0.08881663711994564,
+          0.09526289464336622,
+          0.07902490342041231,
+          0.05075004667877335
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.0915437721814192,
+        "fold_scores": [
+          0.1439451699393976,
+          0.0886092294450418,
+          0.09529140121822556,
+          0.07914168408345217,
+          0.05073137622097886
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09158840734687582,
+        "fold_scores": [
+          0.14415141628726774,
+          0.08886810489755798,
+          0.09521591415021155,
+          0.07895668423586762,
+          0.050749917163474136
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09167645556743599,
+        "fold_scores": [
+          0.14492145010127683,
+          0.08852805645363754,
+          0.09505869256186227,
+          0.0791130168453659,
+          0.05076106187503744
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09233189611323214,
+        "fold_scores": [
+          0.1464345258867066,
+          0.0896993396860732,
+          0.09571970138038678,
+          0.0788129241982468,
+          0.050992989414747295
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09233189611323214,
+        "fold_scores": [
+          0.1464345258867066,
+          0.0896993396860732,
+          0.09571970138038678,
+          0.0788129241982468,
+          0.050992989414747295
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09225894333980197,
+        "fold_scores": [
+          0.14566878354592971,
+          0.08942099156434682,
+          0.09637918905445407,
+          0.07884231075876569,
+          0.05098344177551362
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09225894333980197,
+        "fold_scores": [
+          0.14566878354592971,
+          0.08942099156434682,
+          0.09637918905445407,
+          0.07884231075876569,
+          0.05098344177551362
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09225122548722554,
+        "fold_scores": [
+          0.14477803631460337,
+          0.09063154638913341,
+          0.0958537237841978,
+          0.07901342383048855,
+          0.05097939711770453
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09167299319227998,
+        "fold_scores": [
+          0.14339582800450337,
+          0.08915137159799875,
+          0.09576372284139342,
+          0.07908558063533833,
+          0.050968462882166006
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09223014426739619,
+        "fold_scores": [
+          0.14579335015090836,
+          0.08958012591136616,
+          0.09584018264543931,
+          0.07895401066521722,
+          0.0509830519640499
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.0918488265476506,
+        "fold_scores": [
+          0.14340751042198382,
+          0.08945729179500322,
+          0.09628261942864735,
+          0.07906641392126477,
+          0.05103029717135381
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09171516295835731,
+        "fold_scores": [
+          0.14529963574439694,
+          0.08824652200434624,
+          0.09517007152188864,
+          0.07907538925357,
+          0.05078419626758472
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09171516295835731,
+        "fold_scores": [
+          0.14529963574439694,
+          0.08824652200434624,
+          0.09517007152188864,
+          0.07907538925357,
+          0.05078419626758472
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.091674653599049,
+        "fold_scores": [
+          0.14526670038594208,
+          0.08834963050763232,
+          0.09485386950771976,
+          0.07908598557615452,
+          0.05081708201779627
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.091674653599049,
+        "fold_scores": [
+          0.14526670038594208,
+          0.08834963050763232,
+          0.09485386950771976,
+          0.07908598557615452,
+          0.05081708201779627
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.0915771862510297,
+        "fold_scores": [
+          0.14408762679145434,
+          0.08876569815073215,
+          0.09519049836433847,
+          0.07898751010547483,
+          0.05085459784314867
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09199828384647865,
+        "fold_scores": [
+          0.1463405535818138,
+          0.08873528419528688,
+          0.09519873551898639,
+          0.07888035066293658,
+          0.050836495273369656
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09181925476871014,
+        "fold_scores": [
+          0.14550256615690257,
+          0.0886676882878034,
+          0.0950326433850283,
+          0.07913898658755891,
+          0.05075438942625756
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09166037567274088,
+        "fold_scores": [
+          0.1450350691636347,
+          0.08822836738047292,
+          0.09516006530307401,
+          0.07908650756459158,
+          0.05079186895193117
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.0917095091239479,
+        "fold_scores": [
+          0.1449259924740886,
+          0.08872904169322766,
+          0.09520240031286925,
+          0.07889450256538583,
+          0.05079560857416814
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.0917095091239479,
+        "fold_scores": [
+          0.1449259924740886,
+          0.08872904169322766,
+          0.09520240031286925,
+          0.07889450256538583,
+          0.05079560857416814
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09152585240604497,
+        "fold_scores": [
+          0.14404010568796305,
+          0.08878551317783842,
+          0.0951435377216859,
+          0.07883844841283993,
+          0.05082165702989751
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09152585240604497,
+        "fold_scores": [
+          0.14404010568796305,
+          0.08878551317783842,
+          0.0951435377216859,
+          0.07883844841283993,
+          0.05082165702989751
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09165301335416629,
+        "fold_scores": [
+          0.1437441228060144,
+          0.08899185175908358,
+          0.09551221225102122,
+          0.07919111925832768,
+          0.050825760696384566
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09147317459676393,
+        "fold_scores": [
+          0.14343056971146798,
+          0.08851133042668498,
+          0.09549497451941501,
+          0.07913557498946595,
+          0.050793423336785715
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09115414662954015,
+        "fold_scores": [
+          0.14201494529451628,
+          0.08882692175457842,
+          0.09493963218281688,
+          0.07912058623021248,
+          0.05086864768557671
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09171852317215703,
+        "fold_scores": [
+          0.144997224173723,
+          0.08858171988231059,
+          0.09505206382826213,
+          0.07912365408835906,
+          0.050837953888130366
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09216153400903128,
+        "fold_scores": [
+          0.14607260032642,
+          0.08962765876216693,
+          0.09512885138814588,
+          0.07900234453080109,
+          0.05097621503762253
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09216153400903128,
+        "fold_scores": [
+          0.14607260032642,
+          0.08962765876216693,
+          0.09512885138814588,
+          0.07900234453080109,
+          0.05097621503762253
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09217570626387409,
+        "fold_scores": [
+          0.14639967613450422,
+          0.08942099156434682,
+          0.09510999118593132,
+          0.07893164942413644,
+          0.05101622301045169
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09217570626387409,
+        "fold_scores": [
+          0.14639967613450422,
+          0.08942099156434682,
+          0.09510999118593132,
+          0.07893164942413644,
+          0.05101622301045169
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09165878223457483,
+        "fold_scores": [
+          0.14416724614187246,
+          0.08848676964385746,
+          0.09539572916444,
+          0.07914951388978479,
+          0.05109465233291945
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09172740861554103,
+        "fold_scores": [
+          0.14435637351490135,
+          0.08886370686267804,
+          0.0953553289236616,
+          0.07901780283631096,
+          0.05104383094015321
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.0920804656995687,
+        "fold_scores": [
+          0.14548813910768899,
+          0.08922951896248503,
+          0.09545266633320616,
+          0.0790492353216612,
+          0.0511827687728021
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09147979670236067,
+        "fold_scores": [
+          0.1419131818045851,
+          0.08949470093831467,
+          0.09595838552887562,
+          0.07891050914283297,
+          0.05112220609719499
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09175895294424967,
+        "fold_scores": [
+          0.1456481629619747,
+          0.0882365646776267,
+          0.09517007152188864,
+          0.0789580365329846,
+          0.0507819290267737
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09175895294424967,
+        "fold_scores": [
+          0.1456481629619747,
+          0.0882365646776267,
+          0.09517007152188864,
+          0.0789580365329846,
+          0.0507819290267737
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09182517209970661,
+        "fold_scores": [
+          0.14600861463629478,
+          0.08835059959292992,
+          0.09486427992011835,
+          0.07908598557615452,
+          0.0508163807730355
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09182517209970661,
+        "fold_scores": [
+          0.14600861463629478,
+          0.08835059959292992,
+          0.09486427992011835,
+          0.07908598557615452,
+          0.0508163807730355
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09185263513893734,
+        "fold_scores": [
+          0.14557557678312466,
+          0.08876569815073215,
+          0.09519049836433847,
+          0.07887680455334273,
+          0.05085459784314867
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09198222672953686,
+        "fold_scores": [
+          0.14610371901633376,
+          0.0887250193049626,
+          0.09520145564300402,
+          0.07904444441001428,
+          0.050836495273369656
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09150330372695119,
+        "fold_scores": [
+          0.14397169461394005,
+          0.08856964155706772,
+          0.0950326433850283,
+          0.07918814965246236,
+          0.05075438942625756
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09177277858694968,
+        "fold_scores": [
+          0.14555556885885912,
+          0.08837219175698138,
+          0.09504297032469586,
+          0.07910177823993696,
+          0.05079138375427513
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09135782796092148,
+        "fold_scores": [
+          0.14319101554119687,
+          0.08871002785271437,
+          0.09520240031286925,
+          0.07889462200528086,
+          0.05079107409254609
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09135782796092148,
+        "fold_scores": [
+          0.14319101554119687,
+          0.08871002785271437,
+          0.09520240031286925,
+          0.07889462200528086,
+          0.05079107409254609
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09150273742727535,
+        "fold_scores": [
+          0.14392567729613964,
+          0.08878551317783842,
+          0.0951435377216859,
+          0.07883844841283993,
+          0.05082051052787289
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09150273742727535,
+        "fold_scores": [
+          0.14392567729613964,
+          0.08878551317783842,
+          0.0951435377216859,
+          0.07883844841283993,
+          0.05082051052787289
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09169096103196017,
+        "fold_scores": [
+          0.14395094040906217,
+          0.08899185175908358,
+          0.09549513303694288,
+          0.07919111925832768,
+          0.050825760696384566
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09131874998285773,
+        "fold_scores": [
+          0.1426712056911162,
+          0.08849258262355811,
+          0.09549500200409715,
+          0.07914153625873148,
+          0.050793423336785715
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09144027954513975,
+        "fold_scores": [
+          0.14344560987251428,
+          0.08882692175457842,
+          0.09493963218281688,
+          0.07912058623021248,
+          0.05086864768557671
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09125085284000474,
+        "fold_scores": [
+          0.1435269193594792,
+          0.0885646494131171,
+          0.09422723838043028,
+          0.07909864966089136,
+          0.05083680738610574
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09205049870325271,
+        "fold_scores": [
+          0.145642674674472,
+          0.08951147684846619,
+          0.09512885138814588,
+          0.07900234453080109,
+          0.05096714607437842
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09205049870325271,
+        "fold_scores": [
+          0.145642674674472,
+          0.08951147684846619,
+          0.09512885138814588,
+          0.07900234453080109,
+          0.05096714607437842
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09218056823116116,
+        "fold_scores": [
+          0.14642677172642443,
+          0.08942099156434682,
+          0.09510999118593132,
+          0.07893164942413644,
+          0.051013437254966834
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09218056823116116,
+        "fold_scores": [
+          0.14642677172642443,
+          0.08942099156434682,
+          0.09510999118593132,
+          0.07893164942413644,
+          0.051013437254966834
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.0914295192851115,
+        "fold_scores": [
+          0.14303057142289108,
+          0.0884771296155222,
+          0.09539572916444,
+          0.07914951388978479,
+          0.05109465233291945
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09109635353362858,
+        "fold_scores": [
+          0.141843892757352,
+          0.08820988799046511,
+          0.09537185328070691,
+          0.07901230269946569,
+          0.05104383094015321
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.0920804656995687,
+        "fold_scores": [
+          0.14548813910768899,
+          0.08922951896248503,
+          0.09545266633320616,
+          0.0790492353216612,
+          0.0511827687728021
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.8,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09151569133395657,
+        "fold_scores": [
+          0.1421381261038957,
+          0.0894810982406279,
+          0.09594538253350891,
+          0.07889442945004017,
+          0.051119420341710145
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09159810739758895,
+        "fold_scores": [
+          0.14469341366325922,
+          0.088268415696667,
+          0.09528880918949365,
+          0.07892621269539447,
+          0.05081368574313045
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09159810739758895,
+        "fold_scores": [
+          0.14469341366325922,
+          0.088268415696667,
+          0.09528880918949365,
+          0.07892621269539447,
+          0.05081368574313045
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09139440785682763,
+        "fold_scores": [
+          0.1433601429076911,
+          0.08847942377114243,
+          0.09526632606222078,
+          0.07902570198176125,
+          0.05084044456132256
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09139440785682763,
+        "fold_scores": [
+          0.1433601429076911,
+          0.08847942377114243,
+          0.09526632606222078,
+          0.07902570198176125,
+          0.05084044456132256
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09151017618622008,
+        "fold_scores": [
+          0.1442700279271024,
+          0.08873136937420673,
+          0.09513650312541139,
+          0.07867469153331742,
+          0.05073828897106248
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.0915342995917972,
+        "fold_scores": [
+          0.14483188381104622,
+          0.0881742366707386,
+          0.09526820074705092,
+          0.07866556422615446,
+          0.05073161250399583
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09147430300088896,
+        "fold_scores": [
+          0.144058883644631,
+          0.08870926191863292,
+          0.09503169335156977,
+          0.07886368361250937,
+          0.050707992477101775
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09166110736373459,
+        "fold_scores": [
+          0.14514528491295728,
+          0.0883517746407567,
+          0.0952558322652756,
+          0.07878829396072355,
+          0.05076435103895974
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09185019169586427,
+        "fold_scores": [
+          0.14547185989400385,
+          0.08882456615105846,
+          0.09531670830178468,
+          0.07885606747006933,
+          0.05078175666240496
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09185019169586427,
+        "fold_scores": [
+          0.14547185989400385,
+          0.08882456615105846,
+          0.09531670830178468,
+          0.07885606747006933,
+          0.05078175666240496
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09198411384563579,
+        "fold_scores": [
+          0.14622622599122573,
+          0.08858650592285786,
+          0.095449131082388,
+          0.07887432157983433,
+          0.05078438465187303
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09198411384563579,
+        "fold_scores": [
+          0.14622622599122573,
+          0.08858650592285786,
+          0.095449131082388,
+          0.07887432157983433,
+          0.05078438465187303
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09121989880316198,
+        "fold_scores": [
+          0.14239051392845878,
+          0.08881663711994564,
+          0.0952204701939352,
+          0.0789218260946969,
+          0.05075004667877335
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09207726876068592,
+        "fold_scores": [
+          0.1466008375137961,
+          0.0886382078914186,
+          0.09527423809378392,
+          0.07914168408345217,
+          0.05073137622097886
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09122786269278622,
+        "fold_scores": [
+          0.14234869301681985,
+          0.08886810489755798,
+          0.09521591415021155,
+          0.07895668423586762,
+          0.050749917163474136
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09181022759683344,
+        "fold_scores": [
+          0.14568419348574566,
+          0.08853297731870279,
+          0.0949523911187855,
+          0.07911220171302999,
+          0.05076937434790332
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09222378955821167,
+        "fold_scores": [
+          0.1458964157003582,
+          0.08975573546646283,
+          0.0956611341868281,
+          0.07881267302266198,
+          0.050992989414747295
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09222378955821167,
+        "fold_scores": [
+          0.1458964157003582,
+          0.08975573546646283,
+          0.0956611341868281,
+          0.07881267302266198,
+          0.050992989414747295
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09221974183432657,
+        "fold_scores": [
+          0.14546711719480174,
+          0.08942099156434682,
+          0.09637918905445407,
+          0.07884231075876569,
+          0.05098910059926453
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09221974183432657,
+        "fold_scores": [
+          0.14546711719480174,
+          0.08942099156434682,
+          0.09637918905445407,
+          0.07884231075876569,
+          0.05098910059926453
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09217675853629971,
+        "fold_scores": [
+          0.14436487462753578,
+          0.09063154638913341,
+          0.0958537237841978,
+          0.07905425076292696,
+          0.05097939711770453
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09149226404100287,
+        "fold_scores": [
+          0.14320589330776431,
+          0.088656680888946,
+          0.09571616137516221,
+          0.07891412175097581,
+          0.050968462882166006
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09223014426739619,
+        "fold_scores": [
+          0.14579335015090836,
+          0.08958012591136616,
+          0.09584018264543931,
+          0.07895401066521722,
+          0.0509830519640499
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09209084564232342,
+        "fold_scores": [
+          0.1446185072832362,
+          0.08947089449269002,
+          0.09624698082252499,
+          0.0790664121970939,
+          0.05105143341607201
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09183144509245374,
+        "fold_scores": [
+          0.14590435507061245,
+          0.08825455793440945,
+          0.09531466098166055,
+          0.07887497744248119,
+          0.050808674033105045
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09183144509245374,
+        "fold_scores": [
+          0.14590435507061245,
+          0.08825455793440945,
+          0.09531466098166055,
+          0.07887497744248119,
+          0.050808674033105045
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.0915567402308455,
+        "fold_scores": [
+          0.14412651978245677,
+          0.08842865167946909,
+          0.09537357982218729,
+          0.07901571210434351,
+          0.050839237765770796
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.0915567402308455,
+        "fold_scores": [
+          0.14412651978245677,
+          0.08842865167946909,
+          0.09537357982218729,
+          0.07901571210434351,
+          0.050839237765770796
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09166347484744794,
+        "fold_scores": [
+          0.14502897353259808,
+          0.08873136937420673,
+          0.09514614063304894,
+          0.07867260172632351,
+          0.05073828897106248
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09136867685197161,
+        "fold_scores": [
+          0.1439186312623439,
+          0.08828223203641847,
+          0.09529032514500906,
+          0.07862058331209082,
+          0.05073161250399583
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09128099456767144,
+        "fold_scores": [
+          0.14310293964050969,
+          0.08870926191863292,
+          0.09501932097392832,
+          0.0788649017735969,
+          0.05070854853168943
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09162403252675717,
+        "fold_scores": [
+          0.1447874050671193,
+          0.08854241153272216,
+          0.09524945270607561,
+          0.07878188908615784,
+          0.050759004241710905
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09186459892963855,
+        "fold_scores": [
+          0.145508978310629,
+          0.08892860280906752,
+          0.0953388219129866,
+          0.07876483495310468,
+          0.05078175666240496
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09186459892963855,
+        "fold_scores": [
+          0.145508978310629,
+          0.08892860280906752,
+          0.0953388219129866,
+          0.07876483495310468,
+          0.05078175666240496
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09206704445925837,
+        "fold_scores": [
+          0.1466878828010259,
+          0.08858928988594637,
+          0.09539936831272278,
+          0.07887687968088143,
+          0.0507818016157154
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09206704445925837,
+        "fold_scores": [
+          0.1466878828010259,
+          0.08858928988594637,
+          0.09539936831272278,
+          0.07887687968088143,
+          0.0507818016157154
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09154487700955462,
+        "fold_scores": [
+          0.14386990318527557,
+          0.08881663711994564,
+          0.09526289464336622,
+          0.07902490342041231,
+          0.05075004667877335
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.0915437721814192,
+        "fold_scores": [
+          0.1439451699393976,
+          0.0886092294450418,
+          0.09529140121822556,
+          0.07914168408345217,
+          0.05073137622097886
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09158840734687582,
+        "fold_scores": [
+          0.14415141628726774,
+          0.08886810489755798,
+          0.09521591415021155,
+          0.07895668423586762,
+          0.050749917163474136
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09167645556743599,
+        "fold_scores": [
+          0.14492145010127683,
+          0.08852805645363754,
+          0.09505869256186227,
+          0.0791130168453659,
+          0.05076106187503744
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09233189611323214,
+        "fold_scores": [
+          0.1464345258867066,
+          0.0896993396860732,
+          0.09571970138038678,
+          0.0788129241982468,
+          0.050992989414747295
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09233189611323214,
+        "fold_scores": [
+          0.1464345258867066,
+          0.0896993396860732,
+          0.09571970138038678,
+          0.0788129241982468,
+          0.050992989414747295
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09225894333980197,
+        "fold_scores": [
+          0.14566878354592971,
+          0.08942099156434682,
+          0.09637918905445407,
+          0.07884231075876569,
+          0.05098344177551362
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09225894333980197,
+        "fold_scores": [
+          0.14566878354592971,
+          0.08942099156434682,
+          0.09637918905445407,
+          0.07884231075876569,
+          0.05098344177551362
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09225122548722554,
+        "fold_scores": [
+          0.14477803631460337,
+          0.09063154638913341,
+          0.0958537237841978,
+          0.07901342383048855,
+          0.05097939711770453
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09167299319227998,
+        "fold_scores": [
+          0.14339582800450337,
+          0.08915137159799875,
+          0.09576372284139342,
+          0.07908558063533833,
+          0.050968462882166006
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09223014426739619,
+        "fold_scores": [
+          0.14579335015090836,
+          0.08958012591136616,
+          0.09584018264543931,
+          0.07895401066521722,
+          0.0509830519640499
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.8,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.0918488265476506,
+        "fold_scores": [
+          0.14340751042198382,
+          0.08945729179500322,
+          0.09628261942864735,
+          0.07906641392126477,
+          0.05103029717135381
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09171516295835731,
+        "fold_scores": [
+          0.14529963574439694,
+          0.08824652200434624,
+          0.09517007152188864,
+          0.07907538925357,
+          0.05078419626758472
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09171516295835731,
+        "fold_scores": [
+          0.14529963574439694,
+          0.08824652200434624,
+          0.09517007152188864,
+          0.07907538925357,
+          0.05078419626758472
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.091674653599049,
+        "fold_scores": [
+          0.14526670038594208,
+          0.08834963050763232,
+          0.09485386950771976,
+          0.07908598557615452,
+          0.05081708201779627
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.091674653599049,
+        "fold_scores": [
+          0.14526670038594208,
+          0.08834963050763232,
+          0.09485386950771976,
+          0.07908598557615452,
+          0.05081708201779627
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.0915771862510297,
+        "fold_scores": [
+          0.14408762679145434,
+          0.08876569815073215,
+          0.09519049836433847,
+          0.07898751010547483,
+          0.05085459784314867
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09199828384647865,
+        "fold_scores": [
+          0.1463405535818138,
+          0.08873528419528688,
+          0.09519873551898639,
+          0.07888035066293658,
+          0.050836495273369656
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09181925476871014,
+        "fold_scores": [
+          0.14550256615690257,
+          0.0886676882878034,
+          0.0950326433850283,
+          0.07913898658755891,
+          0.05075438942625756
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09166037567274088,
+        "fold_scores": [
+          0.1450350691636347,
+          0.08822836738047292,
+          0.09516006530307401,
+          0.07908650756459158,
+          0.05079186895193117
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.0917095091239479,
+        "fold_scores": [
+          0.1449259924740886,
+          0.08872904169322766,
+          0.09520240031286925,
+          0.07889450256538583,
+          0.05079560857416814
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.0917095091239479,
+        "fold_scores": [
+          0.1449259924740886,
+          0.08872904169322766,
+          0.09520240031286925,
+          0.07889450256538583,
+          0.05079560857416814
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09152585240604497,
+        "fold_scores": [
+          0.14404010568796305,
+          0.08878551317783842,
+          0.0951435377216859,
+          0.07883844841283993,
+          0.05082165702989751
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09152585240604497,
+        "fold_scores": [
+          0.14404010568796305,
+          0.08878551317783842,
+          0.0951435377216859,
+          0.07883844841283993,
+          0.05082165702989751
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09165301335416629,
+        "fold_scores": [
+          0.1437441228060144,
+          0.08899185175908358,
+          0.09551221225102122,
+          0.07919111925832768,
+          0.050825760696384566
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09147317459676393,
+        "fold_scores": [
+          0.14343056971146798,
+          0.08851133042668498,
+          0.09549497451941501,
+          0.07913557498946595,
+          0.050793423336785715
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09115414662954015,
+        "fold_scores": [
+          0.14201494529451628,
+          0.08882692175457842,
+          0.09493963218281688,
+          0.07912058623021248,
+          0.05086864768557671
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09171852317215703,
+        "fold_scores": [
+          0.144997224173723,
+          0.08858171988231059,
+          0.09505206382826213,
+          0.07912365408835906,
+          0.050837953888130366
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09216153400903128,
+        "fold_scores": [
+          0.14607260032642,
+          0.08962765876216693,
+          0.09512885138814588,
+          0.07900234453080109,
+          0.05097621503762253
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09216153400903128,
+        "fold_scores": [
+          0.14607260032642,
+          0.08962765876216693,
+          0.09512885138814588,
+          0.07900234453080109,
+          0.05097621503762253
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09217570626387409,
+        "fold_scores": [
+          0.14639967613450422,
+          0.08942099156434682,
+          0.09510999118593132,
+          0.07893164942413644,
+          0.05101622301045169
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09217570626387409,
+        "fold_scores": [
+          0.14639967613450422,
+          0.08942099156434682,
+          0.09510999118593132,
+          0.07893164942413644,
+          0.05101622301045169
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09165878223457483,
+        "fold_scores": [
+          0.14416724614187246,
+          0.08848676964385746,
+          0.09539572916444,
+          0.07914951388978479,
+          0.05109465233291945
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09172740861554103,
+        "fold_scores": [
+          0.14435637351490135,
+          0.08886370686267804,
+          0.0953553289236616,
+          0.07901780283631096,
+          0.05104383094015321
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.0920804656995687,
+        "fold_scores": [
+          0.14548813910768899,
+          0.08922951896248503,
+          0.09545266633320616,
+          0.0790492353216612,
+          0.0511827687728021
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.0,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09147979670236067,
+        "fold_scores": [
+          0.1419131818045851,
+          0.08949470093831467,
+          0.09595838552887562,
+          0.07891050914283297,
+          0.05112220609719499
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09175895294424967,
+        "fold_scores": [
+          0.1456481629619747,
+          0.0882365646776267,
+          0.09517007152188864,
+          0.0789580365329846,
+          0.0507819290267737
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09175895294424967,
+        "fold_scores": [
+          0.1456481629619747,
+          0.0882365646776267,
+          0.09517007152188864,
+          0.0789580365329846,
+          0.0507819290267737
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09182517209970661,
+        "fold_scores": [
+          0.14600861463629478,
+          0.08835059959292992,
+          0.09486427992011835,
+          0.07908598557615452,
+          0.0508163807730355
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09182517209970661,
+        "fold_scores": [
+          0.14600861463629478,
+          0.08835059959292992,
+          0.09486427992011835,
+          0.07908598557615452,
+          0.0508163807730355
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09185263513893734,
+        "fold_scores": [
+          0.14557557678312466,
+          0.08876569815073215,
+          0.09519049836433847,
+          0.07887680455334273,
+          0.05085459784314867
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09198222672953686,
+        "fold_scores": [
+          0.14610371901633376,
+          0.0887250193049626,
+          0.09520145564300402,
+          0.07904444441001428,
+          0.050836495273369656
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09150330372695119,
+        "fold_scores": [
+          0.14397169461394005,
+          0.08856964155706772,
+          0.0950326433850283,
+          0.07918814965246236,
+          0.05075438942625756
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09177277858694968,
+        "fold_scores": [
+          0.14555556885885912,
+          0.08837219175698138,
+          0.09504297032469586,
+          0.07910177823993696,
+          0.05079138375427513
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09135782796092148,
+        "fold_scores": [
+          0.14319101554119687,
+          0.08871002785271437,
+          0.09520240031286925,
+          0.07889462200528086,
+          0.05079107409254609
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09135782796092148,
+        "fold_scores": [
+          0.14319101554119687,
+          0.08871002785271437,
+          0.09520240031286925,
+          0.07889462200528086,
+          0.05079107409254609
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09150273742727535,
+        "fold_scores": [
+          0.14392567729613964,
+          0.08878551317783842,
+          0.0951435377216859,
+          0.07883844841283993,
+          0.05082051052787289
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09150273742727535,
+        "fold_scores": [
+          0.14392567729613964,
+          0.08878551317783842,
+          0.0951435377216859,
+          0.07883844841283993,
+          0.05082051052787289
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09169096103196017,
+        "fold_scores": [
+          0.14395094040906217,
+          0.08899185175908358,
+          0.09549513303694288,
+          0.07919111925832768,
+          0.050825760696384566
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09131874998285773,
+        "fold_scores": [
+          0.1426712056911162,
+          0.08849258262355811,
+          0.09549500200409715,
+          0.07914153625873148,
+          0.050793423336785715
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09144027954513975,
+        "fold_scores": [
+          0.14344560987251428,
+          0.08882692175457842,
+          0.09493963218281688,
+          0.07912058623021248,
+          0.05086864768557671
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.1,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09125085284000474,
+        "fold_scores": [
+          0.1435269193594792,
+          0.0885646494131171,
+          0.09422723838043028,
+          0.07909864966089136,
+          0.05083680738610574
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.09205049870325271,
+        "fold_scores": [
+          0.145642674674472,
+          0.08951147684846619,
+          0.09512885138814588,
+          0.07900234453080109,
+          0.05096714607437842
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09205049870325271,
+        "fold_scores": [
+          0.145642674674472,
+          0.08951147684846619,
+          0.09512885138814588,
+          0.07900234453080109,
+          0.05096714607437842
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.09218056823116116,
+        "fold_scores": [
+          0.14642677172642443,
+          0.08942099156434682,
+          0.09510999118593132,
+          0.07893164942413644,
+          0.051013437254966834
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 6,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09218056823116116,
+        "fold_scores": [
+          0.14642677172642443,
+          0.08942099156434682,
+          0.09510999118593132,
+          0.07893164942413644,
+          0.051013437254966834
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 63
+        },
+        "score": 0.0914295192851115,
+        "fold_scores": [
+          0.14303057142289108,
+          0.0884771296155222,
+          0.09539572916444,
+          0.07914951388978479,
+          0.05109465233291945
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 20,
+          "num_leaves": 127
+        },
+        "score": 0.09109635353362858,
+        "fold_scores": [
+          0.141843892757352,
+          0.08820988799046511,
+          0.09537185328070691,
+          0.07901230269946569,
+          0.05104383094015321
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 63
+        },
+        "score": 0.0920804656995687,
+        "fold_scores": [
+          0.14548813910768899,
+          0.08922951896248503,
+          0.09545266633320616,
+          0.0790492353216612,
+          0.0511827687728021
+        ]
+      },
+      {
+        "params": {
+          "bagging_fraction": 0.9,
+          "feature_fraction": 0.9,
+          "lambda_l1": 0.1,
+          "learning_rate": 0.2,
+          "max_depth": 8,
+          "min_data_in_leaf": 50,
+          "num_leaves": 127
+        },
+        "score": 0.09151569133395657,
+        "fold_scores": [
+          0.1421381261038957,
+          0.0894810982406279,
+          0.09594538253350891,
+          0.07889442945004017,
+          0.051119420341710145
+        ]
+      }
+    ]
+  },
+  "post_conformal": {
+    "coverage_post_global": 0.9066108322813068,
+    "width_post_global": 0.1509126320593472,
+    "crossing_rate_post": 0.00015395510669088892,
+    "target_coverage": 0.9,
+    "coverage_post_by_bucket": {
+      "squeeze_mid|vol_mid": 0.8975225225225225,
+      "squeeze_mid|vol_low": 0.917636252296387,
+      "squeeze_low|vol_low": 0.9030808729139923,
+      "squeeze_low|vol_mid": 0.8969856599356161,
+      "squeeze_low|vol_high": 0.8997451146983857,
+      "squeeze_mid|vol_high": 0.9063802500801539,
+      "squeeze_high|vol_high": 0.8995405819295559,
+      "squeeze_high|vol_mid": 0.9410377358490566,
+      "squeeze_high|vol_low": 0.9156626506024096
+    },
+    "width_post_by_bucket": {
+      "squeeze_mid|vol_mid": 0.14086613282928853,
+      "squeeze_mid|vol_low": 0.11894066629793079,
+      "squeeze_low|vol_low": 0.09026607521454133,
+      "squeeze_low|vol_mid": 0.11243287819430364,
+      "squeeze_low|vol_high": 0.1310142225273721,
+      "squeeze_mid|vol_high": 0.15852401700689064,
+      "squeeze_high|vol_high": 0.24082667203356253,
+      "squeeze_high|vol_mid": 0.17971695833838425,
+      "squeeze_high|vol_low": 0.14000311015563455
+    },
+    "buckets": [
+      "squeeze_mid|vol_mid",
+      "squeeze_mid|vol_low",
+      "squeeze_low|vol_low",
+      "squeeze_low|vol_mid",
+      "squeeze_low|vol_high",
+      "squeeze_mid|vol_high",
+      "squeeze_high|vol_high",
+      "squeeze_high|vol_mid",
+      "squeeze_high|vol_low"
+    ]
+  },
+  "quality_control": {
+    "timestamp": "2025-10-02T13:48:11.534753",
+    "horizons_T": [
+      48
+    ],
+    "qc_passed": true,
+    "warnings": [],
+    "errors": [],
+    "monotonicity_by_T": {
+      "48": {
+        "monotonic": true,
+        "violation_rate": 0.00018474612802906671,
+        "total_violations": 6,
+        "total_comparisons": 32477,
+        "violation_details": []
+      }
+    },
+    "width_coherence": {
+      "coherent": true,
+      "width_by_T": {}
+    },
+    "distributional_by_T": {
+      "48": {
+        "pit_ks_statistic": 0.10816752528404316,
+        "pit_ks_pvalue": 0.0,
+        "pit_mean": 0.4799534889147719,
+        "pit_std": 0.26494400194113615,
+        "coverage_05_95": 0.9018382239738892,
+        "coverage_error_05_95": 0.0018382239738893302,
+        "coverage_25_75": 0.5201835144871756,
+        "coverage_error_25_75": 0.02018351448717559
+      }
+    },
+    "summary": {
+      "total_errors": 0,
+      "total_warnings": 0,
+      "status": "PASS"
+    }
+  }
+}

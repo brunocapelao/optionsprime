@@ -1,0 +1,42 @@
+{
+  "timestamp": "2025-10-02T15:28:43.291719",
+  "model_status": {
+    "42": {
+      "model_exists": true,
+      "calib_exists": true,
+      "cv_exists": true,
+      "model_size_mb": 15.110116004943848,
+      "calib_size_kb": 0.8583984375
+    },
+    "48": {
+      "model_exists": true,
+      "calib_exists": true,
+      "cv_exists": true,
+      "model_size_mb": 17.87117290496826,
+      "calib_size_kb": 0.8583984375
+    },
+    "54": {
+      "model_exists": true,
+      "calib_exists": true,
+      "cv_exists": true,
+      "model_size_mb": 8.933309555053711,
+      "calib_size_kb": 0.8583984375
+    },
+    "60": {
+      "model_exists": true,
+      "calib_exists": true,
+      "cv_exists": true,
+      "model_size_mb": 13.119499206542969,
+      "calib_size_kb": 0.8583984375
+    }
+  },
+  "calibration_status": {},
+  "quality_scores": {
+    "completeness": 133.33333333333331,
+    "calibration": 0.0,
+    "size_consistency": 100
+  },
+  "overall_quality": 77.77777777777777,
+  "status": "\ud83d\udfe1 BOM",
+  "recommendation": "\u26a0\ufe0f Verificar pontos de aten\u00e7\u00e3o antes da produ\u00e7\u00e3o"
+}

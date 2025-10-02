@@ -1,0 +1,171 @@
+{
+  "pipeline_version": "02a",
+  "execution_time": 2547.4655759334564,
+  "trained_horizons": [
+    42,
+    48,
+    54,
+    60
+  ],
+  "total_models": 20,
+  "timestamp": 1759424946.619393,
+  "config": {
+    "targets_T": [
+      42,
+      48,
+      54,
+      60
+    ],
+    "taus": [
+      0.05,
+      0.25,
+      0.5,
+      0.75,
+      0.95
+    ],
+    "data": {
+      "features_path": "data/processed/features/features_4H.parquet",
+      "cv_splits_path": "data/processed/features/cv_splits.json",
+      "max_nan_ratio": 0.5,
+      "collinearity_threshold": 0.95
+    },
+    "cpcv": {
+      "embargo_bars_4h": 42
+    },
+    "lgb_base_params": {
+      "num_threads": 12,
+      "force_row_wise": true,
+      "max_bin": 255,
+      "boost_from_average": true,
+      "max_depth": 8,
+      "min_data_in_leaf": 20,
+      "lambda_l1": 0.01,
+      "lambda_l2": 0.01,
+      "verbosity": 1,
+      "objective": "quantile",
+      "metric": "quantile"
+    },
+    "model": {
+      "param_grid": {
+        "learning_rate": [
+          0.05,
+          0.1,
+          0.2
+        ],
+        "num_leaves": [
+          63,
+          127
+        ],
+        "max_depth": [
+          6,
+          8
+        ],
+        "min_data_in_leaf": [
+          20,
+          50
+        ],
+        "feature_fraction": [
+          0.8,
+          0.9
+        ],
+        "bagging_fraction": [
+          0.8,
+          0.9
+        ],
+        "lambda_l1": [
+          0.0,
+          0.1
+        ]
+      }
+    },
+    "cv": {
+      "n_splits": 4,
+      "test_size": 0.2,
+      "random_state": 42
+    },
+    "conformal": {
+      "alpha": 0.1,
+      "window_days": 90,
+      "coverage_targets": [
+        0.87,
+        0.9,
+        0.93
+      ],
+      "mondrian": {
+        "regime_buckets": [
+          "high_vol",
+          "normal",
+          "low_vol"
+        ],
+        "vol_buckets": 3,
+        "use_mondrian": true,
+        "volatility_window": 168,
+        "n_buckets": [
+          3,
+          5
+        ]
+      },
+      "shrinkage": {
+        "min_bucket_size": 300,
+        "global_weight": 0.5
+      },
+      "lambda": 0.01,
+      "calibration_window": 7000
+    },
+    "qc": {
+      "min_coverage": 0.87,
+      "max_coverage": 0.93,
+      "max_crossing_rate": 0.005,
+      "interval_score_threshold": 2.0
+    },
+    "output": {
+      "dir": "data/processed/preds"
+    },
+    "checkpoint": {
+      "enabled": true,
+      "save_frequency": 1,
+      "auto_resume": true
+    },
+    "save_outputs": {
+      "models": true,
+      "predictions": true,
+      "feature_importance": true,
+      "cv_results": true,
+      "qc_report": true
+    }
+  },
+  "saved_files": {
+    "42": {
+      "quantiles_model": "data/processed/preds/quantiles_model.joblib",
+      "models_T42": "data/processed/preds/models_T42.joblib",
+      "cv_metrics": "data/processed/preds/cv_metrics.json",
+      "cv_metrics_T42": "data/processed/preds/cv_metrics_T42.json",
+      "calibrators_T42": "data/processed/preds/calibrators_T42.joblib",
+      "meta_train": "data/processed/preds/meta_train.json"
+    },
+    "48": {
+      "quantiles_model": "data/processed/preds/quantiles_model.joblib",
+      "models_T48": "data/processed/preds/models_T48.joblib",
+      "cv_metrics": "data/processed/preds/cv_metrics.json",
+      "cv_metrics_T48": "data/processed/preds/cv_metrics_T48.json",
+      "calibrators_T48": "data/processed/preds/calibrators_T48.joblib",
+      "meta_train": "data/processed/preds/meta_train.json"
+    },
+    "54": {
+      "quantiles_model": "data/processed/preds/quantiles_model.joblib",
+      "models_T54": "data/processed/preds/models_T54.joblib",
+      "cv_metrics": "data/processed/preds/cv_metrics.json",
+      "cv_metrics_T54": "data/processed/preds/cv_metrics_T54.json",
+      "calibrators_T54": "data/processed/preds/calibrators_T54.joblib",
+      "meta_train": "data/processed/preds/meta_train.json"
+    },
+    "60": {
+      "quantiles_model": "data/processed/preds/quantiles_model.joblib",
+      "models_T60": "data/processed/preds/models_T60.joblib",
+      "cv_metrics": "data/processed/preds/cv_metrics.json",
+      "cv_metrics_T60": "data/processed/preds/cv_metrics_T60.json",
+      "calibrators_T60": "data/processed/preds/calibrators_T60.joblib",
+      "meta_train": "data/processed/preds/meta_train.json"
+    }
+  }
+}

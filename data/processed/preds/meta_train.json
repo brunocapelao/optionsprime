@@ -1,0 +1,37 @@
+{
+  "T_horizon": 60,
+  "embargo": 42,
+  "n_samples_total": 32465,
+  "n_features": 33,
+  "n_models": 5,
+  "n_calibrators": 10,
+  "quantiles": [
+    0.05,
+    0.25,
+    0.5,
+    0.75,
+    0.95
+  ],
+  "targets_T": [
+    42,
+    48,
+    54,
+    60
+  ],
+  "folds": 0,
+  "timestamp": 1759424946.569654,
+  "config_hash": "-2703204932989726672",
+  "data_hash": "95e4c9a6fe0a670d51dc591cb66c0a17568f62a622adf95683d3ca4473f31a83",
+  "git_sha": null,
+  "seed": 17,
+  "cv_type": "CPCV_purged",
+  "environment_versions": {
+    "python": "3.13.5",
+    "numpy": "1.26.4",
+    "pandas": "2.3.0",
+    "platform": "macOS-26.0.1-arm64-arm-64bit-Mach-O",
+    "git_sha": null,
+    "timestamp": "2025-10-02T17:09:06.605253+00:00",
+    "lightgbm": "4.6.0"
+  }
+}

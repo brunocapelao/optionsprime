@@ -1,0 +1,87 @@
+{
+  "r_4h": {
+    "formula": "ln(C_t/C_{t-1})",
+    "window": null,
+    "lag": 1,
+    "scaling": null,
+    "winsor": 0.01,
+    "source_cols": [
+      "close"
+    ],
+    "created_at": "2025-10-02T10:43:08.662432+00:00"
+  },
+  "mom_z_1w": {
+    "formula": "EMA_1w(r_4h)/sd_1w(r_4h)",
+    "window": 42,
+    "lag": 1,
+    "scaling": "z",
+    "winsor": 0.01,
+    "source_cols": [],
+    "created_at": "2025-10-02T10:43:08.662432+00:00"
+  },
+  "rv_rs_1w": {
+    "formula": "Rogers\u2013Satchell 1w",
+    "window": 42,
+    "lag": 1,
+    "scaling": null,
+    "winsor": 0.01,
+    "source_cols": [
+      "high",
+      "low",
+      "close"
+    ],
+    "created_at": "2025-10-02T10:43:08.662432+00:00"
+  },
+  "vov_2w": {
+    "formula": "sd_2w(sqrt(rv_cc_1d))",
+    "window": 84,
+    "lag": 1,
+    "scaling": null,
+    "winsor": 0.01,
+    "source_cols": [],
+    "created_at": "2025-10-02T10:43:08.662432+00:00"
+  },
+  "lev_ratio_1w": {
+    "formula": "rv_neg_1w/(rv_pos_1w+eps)",
+    "window": 42,
+    "lag": 1,
+    "scaling": null,
+    "winsor": 0.01,
+    "source_cols": [],
+    "created_at": "2025-10-02T10:43:08.662432+00:00"
+  },
+  "bb_z_1m": {
+    "formula": "(C\u2212MA_1m)/SD_1m",
+    "window": 168,
+    "lag": 1,
+    "scaling": "z",
+    "winsor": 0.01,
+    "source_cols": [
+      "close"
+    ],
+    "created_at": "2025-10-02T10:43:08.662432+00:00"
+  },
+  "amihud_1w": {
+    "formula": "median(|r_4h|/(dollar_vol_4h+eps);1W)",
+    "window": 42,
+    "lag": 1,
+    "scaling": null,
+    "winsor": 0.01,
+    "source_cols": [
+      "r_4h",
+      "dollar_vol_4h"
+    ],
+    "created_at": "2025-10-02T10:43:08.662432+00:00"
+  },
+  "collinearity_drop": {
+    "threshold": 0.95,
+    "removed": [
+      "rv_rs_1w_l1",
+      "bv_1d_l1",
+      "rv_neg_1w_l1",
+      "rv_pos_1w_l1",
+      "rq_1d_l1",
+      "pband_1m_l1"
+    ]
+  }
+}

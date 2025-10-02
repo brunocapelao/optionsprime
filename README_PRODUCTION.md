@@ -27,7 +27,7 @@ Sistema de trading quantitativo baseado em **Conformal Quantile Regression (CQR)
 │   ├── Statistical Testing
 │   └── Walk-Forward Backtesting
 └── 📈 Production Models
-    ├── 4 Horizontes Temporais (42H-60H)
+    ├── 4 Horizontes Temporais (42-60 barras 4H = 7-10 dias)
     ├── 5 Quantis (5%, 25%, 50%, 75%, 95%)
     └── Calibradores Conformes
 ```
@@ -72,10 +72,10 @@ project/
 ## 🎯 Modelos em Produção
 
 ### CQR_LightGBM Stack
-- **Horizonte 42H**: `models_T42.joblib` (15MB)
-- **Horizonte 48H**: `models_T48.joblib` (18MB)  
-- **Horizonte 54H**: `models_T54.joblib` (8.9MB)
-- **Horizonte 60H**: `models_T60.joblib` (13MB)
+- **Horizonte T=42 (7 dias)**: `models_T42.joblib` (15MB)
+- **Horizonte T=48 (8 dias)**: `models_T48.joblib` (18MB)  
+- **Horizonte T=54 (9 dias)**: `models_T54.joblib` (8.9MB)
+- **Horizonte T=60 (10 dias)**: `models_T60.joblib` (13MB)
 
 ### Calibradores Conformes
 - Calibração dinâmica dos intervalos de confiança

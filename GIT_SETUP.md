@@ -133,5 +133,10 @@ Para reproduzir o ambiente completo:
 
 ---
 
-*Repositório configurado em: $(date)*
+**Configurações do Git:**
+- Usuário: brunocapelao
+- Email: brcapelao@gmail.com
+- Branch padrão: main
+
+*Repositório configurado em: October 2, 2025*
 *Commit inicial: ef0bafc*

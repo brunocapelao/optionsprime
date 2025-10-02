@@ -1,5 +1,41 @@
 # Options Prime — Especificação do Sistema
 
+[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+> **Propósito**: rotina diária que lê o **regime** do BTC (4H, *bar-close*) e monta **estruturas de opções de 7–10 dias** com risco limitado, usando bandas preditivas calibradas **fora-da-amostra (OOS)**. O "motor" de retorno combina **direção** + relação **IV vs RV** nesses 7–10 dias.
+
+---
+
+## 🚀 Quick Start
+
+```bash
+# Clone o repositório
+git clone git@github.com:brunocapelao/optionsprime.git
+cd optionsprime
+
+# Configure o ambiente
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+
+# Instale dependências
+pip install -r requirements.txt
+
+# Configure Git hooks (importante!)
+pip install nbstripout pre-commit
+nbstripout --install
+pre-commit install
+
+# Execute os notebooks na ordem
+jupyter lab
+```
+
+📖 **[Leia o guia completo de contribuição](CONTRIBUTING.md)** para melhores práticas de Git e ML.
+
+---ions Prime — Especificação do Sistema
+
 > **Propósito**: rotina diária que lê o **regime** do BTC (4H, *bar-close*) e monta **estruturas de opções de 7–10 dias** com risco limitado, usando bandas preditivas calibradas **fora-da-amostra (OOS)**. O “motor” de retorno combina **direção** + relação **IV vs RV** nesses 7–10 dias.
 
 ---

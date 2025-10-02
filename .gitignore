@@ -39,10 +39,41 @@ coverage.xml
 
 # Jupyter Notebook
 .ipynb_checkpoints
+*.ipynb_checkpoints
 
 # IPython
 profile_default/
 ipython_config.py
+
+# === Machine Learning Artifacts ===
+# Models (use DVC for versioning)
+*.joblib
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.onnx
+*.pb
+
+# ML Experiment Tracking
+mlruns/
+wandb/
+.wandb/
+tensorboard/
+runs/
+*.ckpt
+lightning_logs/
+
+# Data files (consider using DVC)
+# Uncomment lines below if you want to exclude large data files
+# *.parquet
+# *.feather
+# *.arrow
+# data/processed/**/*.parquet
+# data/processed/**/*.joblib
+# data/raw/**/*.csv
 
 # pyenv
 .python-version

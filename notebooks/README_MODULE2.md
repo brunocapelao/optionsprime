@@ -47,7 +47,7 @@ Este diretório contém notebooks organizados e focados para verificação do mo
 ## 📊 Métricas Analisadas
 
 ### Qualidade do Modelo:
-- **Completeness**: Modelos para todos os horizontes (42H-60H)
+- **Completeness**: Modelos para todos os horizontes (T=42-60 barras 4H = 7-10 dias)
 - **Calibração**: Coverage dentro do range (87%-93%)
 - **Feature Importance**: Relevância das variáveis preditivas
 - **Integridade**: Tamanhos e formatos dos arquivos

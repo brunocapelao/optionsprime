@@ -29,6 +29,17 @@ def save_predictions_parquet(
     """
     Save daily predictions in parquet format according to 02a specification.
     
+    The output parquet includes:
+    - ts0: Reference timestamp (when prediction was made)
+    - ts_forecast: Target forecast timestamp (ts0 + T × 4H)
+    - T: Horizon in 4H bars
+    - h_days: Horizon in days
+    - S0: Reference price
+    - Quantiles in log-return space: q05, q25, q50, q75, q95
+    - Quantiles in absolute prices: p_05, p_25, p_50, p_75, p_95
+    - Convenience fields: p_low, p_high, p_med
+    - rvhat_ann: Annualized RV from bands width
+    
     Args:
         predictions_dict: Dict with quantile predictions {tau: array}
         ts0: Reference timestamp (bar close)
@@ -46,9 +57,13 @@ def save_predictions_parquet(
     q_keys = ['q05', 'q25', 'q50', 'q75', 'q95']
     tau_keys = [0.05, 0.25, 0.50, 0.75, 0.95]
     
+    # Calculate forecast target date (ts0 + T barras × 4H)
+    ts_forecast = ts0 + pd.Timedelta(hours=T * 4)
+    
     # Initialize record
     record = {
         'ts0': ts0,
+        'ts_forecast': ts_forecast,
         'T': T,
         'h_days': h_days,
         'S0': S0,
@@ -81,12 +96,18 @@ def save_predictions_parquet(
     # Create DataFrame
     df = pd.DataFrame([record])
     
-    # Ensure timezone (use tz_convert if already timezone-aware)
+    # Ensure timezone for both timestamps (use tz_convert if already timezone-aware)
     df['ts0'] = pd.to_datetime(df['ts0'])
     if df['ts0'].dt.tz is None:
         df['ts0'] = df['ts0'].dt.tz_localize('UTC')
     else:
         df['ts0'] = df['ts0'].dt.tz_convert('UTC')
+    
+    df['ts_forecast'] = pd.to_datetime(df['ts_forecast'])
+    if df['ts_forecast'].dt.tz is None:
+        df['ts_forecast'] = df['ts_forecast'].dt.tz_localize('UTC')
+    else:
+        df['ts_forecast'] = df['ts_forecast'].dt.tz_convert('UTC')
     
     # Define output path if not provided
     if output_path is None:
